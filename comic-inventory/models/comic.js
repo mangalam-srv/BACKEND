@@ -1,4 +1,4 @@
-// models/Comic.js
+
 const mongoose = require('mongoose');
 
 const comicSchema = new mongoose.Schema({

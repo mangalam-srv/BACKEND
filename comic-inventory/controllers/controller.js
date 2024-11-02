@@ -1,7 +1,7 @@
-// controllers/comicController.js
+
 const Comic = require('./models/comic.js');
 
-// Create a new comic
+
 exports.createComic = async (req, res) => {
   try {
     const comic = new Comic(req.body);
@@ -12,7 +12,7 @@ exports.createComic = async (req, res) => {
   }
 };
 
-// Get all comics
+
 exports.getAllComics = async (req, res) => {
   try {
     const comics = await Comic.find();
@@ -22,7 +22,7 @@ exports.getAllComics = async (req, res) => {
   }
 };
 
-// Update a comic by ID
+
 exports.updateComic = async (req, res) => {
   try {
     const comic = await Comic.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -33,7 +33,7 @@ exports.updateComic = async (req, res) => {
   }
 };
 
-// Delete a comic by ID
+
 exports.deleteComic = async (req, res) => {
   try {
     const comic = await Comic.findByIdAndDelete(req.params.id);
